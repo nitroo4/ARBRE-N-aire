@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1759047830 source:d:\projet\arbre-n-aire\parcours infixe\main.c
+	"arbres.h"
+
+1759047583 source:d:\projet\arbre-n-aire\parcours infixe\arbre.c
+	"arbres.h"
+
+1759047341 d:\projet\arbre-n-aire\parcours infixe\arbres.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1759047437 source:d:\projet\arbre-n-aire\parcours infixe\liste.c
+	"liste.h"
+
+1758992667 d:\projet\arbre-n-aire\parcours infixe\liste.h
+	"arbres.h"
+

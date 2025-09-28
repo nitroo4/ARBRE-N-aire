@@ -1,34 +1,28 @@
 #ifndef ARBRES_H_INCLUDED
 #define ARBRES_H_INCLUDED
-#define MALLOC(X) ((x * ) malloc(sizeof(x))
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
 #define ELEMENTNULL 0
 #define ARBRENULL NULL
-#include "liste.h"
+#define MALLOC(x) ((x*) malloc(sizeof(x)))
+
 typedef int Element;
 
-typedef struct arb {
+typedef struct noeud {
     Element elmt;
-    Element child;
-    struct arb** child ;
-    int equilibre;
-    int hauteur;
-} Arbre;
+    struct noeud* racine;   // premier fils
+    struct noeud* suivant;  // frère suivant
+} Noeud;
 
-typedef Arbre* PArbre;
+typedef Noeud* PArbre;
 
-typedef struct {
-    int elmt;
-    int info;
-} TArbre;
+/* Prototypes */
+PArbre creerNoeud(Element e);
+void ajouterFils(PArbre parent, PArbre fils);
+void traiter(Element e);
+void parcoursInfixe(PArbre a);
 
-int max(int, int);
-int min(int, int);
-
-bool estVide(PArbre);
-bool estFeuille(PArbre);
-Element racine(PArbre);
-PArbre modifierRacine(PArbre, Element);
-
-
-
-#endif // ARBRES_H_INCLUDED
+#endif // ARBRE_H_INCLUDED

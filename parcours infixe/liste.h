@@ -1,26 +1,26 @@
 #ifndef LISTE_H_INCLUDED
 #define LISTE_H_INCLUDED
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
 #include "arbres.h"
 
 typedef struct lst {
-PArbre value;
-struct lst * suiv;
+    PArbre val;
+    struct lst* suiv;
 } Liste;
 
 typedef Liste* Pliste;
-typedef struct sfiles {
-Pliste tete;
-Pliste queue;
-} sFile;
 
-Pliste creerEltListe(PArbre, Pliste);
-void creerFile(sFile *);
-bool fileVide(sFile);
-void enfiler(sfile *, PArbre);
-PArbre defiler(sFile *);
+typedef struct {
+    Pliste tete;
+    Pliste queue;
+} SFile;
 
-#endif // LISTE_H_INCLUDED
+/* Prototypes */
+Pliste creerEltListe(PArbre x, Pliste suiv);
+void creerFile(SFile* f);
+bool fileVide(SFile f);
+void enfiler(SFile* f, PArbre x);
+PArbre defiler(SFile* f);
+
+#endif // FILE_H_INCLUDED
+
