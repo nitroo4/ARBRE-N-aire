@@ -9,7 +9,7 @@
 typedef int Element;
 typedef struct noeud {
     Element elmt;
-    struct noeud* racine;   // fils
+    struct noeud* racine;   // valeurs
     struct noeud* suivant;  // suivant
 } Noeud;
 typedef Noeud* PArbre;
