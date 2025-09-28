@@ -8,7 +8,6 @@ int main() {
     PArbre n3 = creerNoeud(45);
     PArbre n4 = creerNoeud(99);
     PArbre n5 = creerNoeud(4);
-
     PArbre n6 = creerNoeud(64);
     PArbre n7 = creerNoeud(6);
     PArbre n8 = creerNoeud(120);
