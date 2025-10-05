@@ -1,5 +1,3 @@
-# === CODE COMPLET - ZÉRO BIBLIOTHÈQUE EXTERNE ===
-
 class Noeud:
     def __init__(self, valeur):
         self.valeur = valeur
@@ -12,11 +10,10 @@ def parcours_postfixe(noeud):
     
     resultat = []
     
-    # Parcourir tous les enfants d'abord
+    
     for enfant in noeud.enfants:
         resultat.extend(parcours_postfixe(enfant))
     
-    # Puis ajouter le parent
     resultat.append(noeud.valeur)
     return resultat
 
@@ -27,7 +24,6 @@ def afficher_arbre(noeud, niveau=0):
         for enfant in noeud.enfants:
             afficher_arbre(enfant, niveau + 1)
 
-# === CRÉATION DE L'ARBRE ===
 racine = Noeud("A")
 b = Noeud("B") 
 c = Noeud("C")
@@ -39,7 +35,6 @@ racine.enfants = [b, c]
 b.enfants = [d]
 c.enfants = [e, f]
 
-# === EXÉCUTION ===
 print("Arbre créé :")
 afficher_arbre(racine)
 
