@@ -1,1 +1,10 @@
-dvgdh
+CONCEPTS IMPORTANTS:
+- RÉCURSIVITÉ: La fonction s'appelle elle-même
+- ARBRE N-AIRE: Nombre variable d'enfants par nœud  
+- PARCOURS POSTFIXE: Traitement des enfants avant le parent
+- STRUCTURE HIÉRARCHIQUE: Organisation en niveaux
+
+APPLICATIONS:
+- Évaluation d'expressions mathématiques
+- Calculs dépendants (résultat enfants nécessaire pour parent)
+- Libération de mémoire en programmation
